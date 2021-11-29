@@ -2,7 +2,7 @@ import React from 'react'
 import './Onboarding.css';
 import onboarding from "./onboarding1.png"
 import { IonFab, IonFabButton, IonIcon, IonFabList } from '@ionic/react';
-import {  arrowForwardCircle } from 'ionicons/icons';
+import {  arrowForwardOutline } from 'ionicons/icons';
 
 
 
@@ -16,7 +16,7 @@ function index() {
             thus boosting sustainability!</h2>
             <IonFab vertical="bottom" horizontal="end" slot="fixed" className="next_button" color="primary">
                 <IonFabButton>
-                    <IonIcon icon={arrowForwardCircle} />
+                    <IonIcon className="next-icon" icon= {arrowForwardOutline} />
                 </IonFabButton>
             </IonFab>
         </div>

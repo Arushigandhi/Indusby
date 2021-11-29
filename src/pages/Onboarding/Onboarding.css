@@ -1,30 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,200;1,300;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,200;1,300;1,700&display=swap");
 
-
-img{
-    width: 250px;
-    display: block;
-    margin: auto;
-    padding-top: 35%;
+img {
+  width: 250px;
+  display: block;
+  margin: auto;
+  margin-top: 40%;
 }
 
-.title{
-    font-family: Montserrat;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 24px;
-    text-align: center;
-    padding-top: 5%;
+.title {
+  font-family: Montserrat;
+  font-weight: 500;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 15%;
 }
 
-.caption{
-    font-family: Montserrat;
-    font-weight: 300;
-    font-size: 14px;
-    text-align: center;
-    color: #7A8488;
+.caption {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #c1c1c1;
 }
 
-.next_button{
-    color: #3FDC9D;
+.next_button {
+  color: #3fdc9d;
+}
+
+.next-icon {
+  background-color: transparent;
 }
