@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+.login-shape {
+  width: 40px;
+  height: 40px;
+  margin-top: 40%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background: linear-gradient(180deg, #40df9f 0%, #3ed598 100%);
+  box-shadow: 0px 2px 4px rgba(15, 218, 137, 0.3);
+  border-radius: 12px;
+}
+
+.login-heading {
+  color: white;
+  font-family: ABeeZee;
+  font-size: 42px;
+  padding: 0px 20px;
+}
+
+.login-desc {
+  color: #96a7af;
+  font-family: ABeeZee;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.icon-wrapper {
+  width: 30px;
+  height: 40px;
+  background-color: #435158;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.person-icon {
+  background-color: transparent;
+  color: #40df9f;
+}
+
+.input-styling {
+  --background: transparent;
+  margin: 1.3rem;
+  width: 75%;
+  font-size: 1.5rem;
+  text-align: left;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --color: black;
+  --placeholder-color: rgb(54, 54, 54);
+}
