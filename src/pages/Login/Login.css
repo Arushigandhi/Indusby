@@ -43,14 +43,32 @@
 
 .input-styling {
   --background: transparent;
-  margin: 1.3rem;
-  width: 75%;
-  font-size: 1.5rem;
+  margin: 0.5rem;
+  margin-right: 2rem;
+  font-size: 1.2rem;
   text-align: left;
-  --padding-top: 14px;
-  --padding-bottom: 14px;
-  --padding-start: 14px;
-  --padding-end: 14px;
-  --color: black;
-  --placeholder-color: rgb(54, 54, 54);
+  font-family: ABeeZee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: white;
+  --placeholder-color: #96a7af;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.button-styling {
+  margin: 20%;
+  --border-radius: 10px;
+}
+
+.arrow-icon {
+  background-color: transparent;
+  font-size: 1.2rem;
+  margin-left: 5px;
 }
