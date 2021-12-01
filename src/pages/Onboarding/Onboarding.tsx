@@ -6,7 +6,7 @@ import {  arrowForwardOutline } from 'ionicons/icons';
 
 
 
-function index() {
+const Onboarding: React.FC = () => {
     return (
         <div>
             <img src={onboarding} alt=""/>
@@ -14,13 +14,15 @@ function index() {
             <h2 className="caption">We will connect you to avenues of industry waste 
             that you can make use of for your projects, 
             thus boosting sustainability!</h2>
+            <a href="/onboarding1">
             <IonFab vertical="bottom" horizontal="end" slot="fixed" className="next_button" color="primary">
                 <IonFabButton>
                     <IonIcon className="next-icon" icon= {arrowForwardOutline} />
                 </IonFabButton>
             </IonFab>
+            </a>
         </div>
-    )
-}
+    );
+};
 
-export default index
+export default Onboarding
