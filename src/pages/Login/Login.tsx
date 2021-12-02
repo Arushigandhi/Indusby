@@ -1,17 +1,12 @@
-import React, { useState } from "react";
-import "./Login.css";
-import {
-  IonIcon,
-  IonInput,
-  IonButton,
-  IonToast,
-  IonLoading,
-  IonPage,
-  IonContent,
-} from "@ionic/react";
-import { arrowForwardOutline, person, personOutline } from "ionicons/icons";
-import { Link } from "react-router-dom";
-import { loginUser } from "../../firebaseConfig";
+import React, { useState } from 'react'
+import './Login.css'
+import {IonIcon, IonInput, IonButton, IonToast, IonLoading} from '@ionic/react'
+import { arrowForwardOutline, person, personOutline } from 'ionicons/icons'
+import { Link, useHistory } from 'react-router-dom';
+import { loginUser } from '../../firebaseConfig'
+import { setUserState } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
+
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -20,18 +15,31 @@ const Login: React.FC = () => {
   const [showToast, setShowToast] = useState<boolean>(false);
   const [busy, setBusy] = useState<boolean>(false);
 
-  async function login() {
-    setBusy(true);
-    try {
-      const data: any = await loginUser(email, password);
-      console.log(data);
-      setMessage("Logged in successfully");
-      setShowToast(true);
-      window.history.replaceState({}, "", "/home");
-    } catch (e: any) {
-      console.log(e.message, e.code);
-      setMessage("Error Logging in");
-      setShowToast(true);
+    const [email, setEmail] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
+    const [showToast, setShowToast] = useState<boolean>(false)
+    const [busy, setBusy] = useState<boolean>(false)
+
+      const dispatch = useDispatch()
+  const history = useHistory()
+
+    async function login() {
+      setBusy(true)
+      try{
+        
+        const data: any = await loginUser(email, password);
+        console.log(data)
+        dispatch(setUserState(data.user.email))
+        history.push('/home')
+        setMessage("Logged in successfully");
+        setShowToast(true); 
+      } catch(e:any) {
+        console.log(e.message, e.code)
+        setMessage("Error Logging in");
+        setShowToast(true);
+      } 
+      setBusy(false);
     }
     setBusy(false);
   }

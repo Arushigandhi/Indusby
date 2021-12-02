@@ -1,0 +1,25 @@
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color: #FFC542;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .prof_layout{
+    margin: auto;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-bottom: #B8C2C0 solid 0.8px;
+  }
+
+  .prof_title{
+    font-family: Montserrat;
+    font-weight: 500;
+    color: white;
+    font-size: 15px;
+    text-align: center;   
+    margin-left: 10px; 
+  }
