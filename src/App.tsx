@@ -28,6 +28,9 @@ import Onboarding1 from './pages/Onboarding/Onboarding1';
 import Onboarding2 from './pages/Onboarding/Onboarding2';
 import { useEffect, useState } from 'react';
 import { getCurrentUser } from './firebaseConfig'
+import Mixd from './pages/Mixd/Mixd';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Profile from './pages/Profile/Profile';
 
 
 const RoutingSystem: React.FC = () => {
@@ -59,8 +62,6 @@ const App: React.FC = () => {
         }
         setBusy(false)
     }
-      
-    
     )
   }, [])
 

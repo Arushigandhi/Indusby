@@ -4,6 +4,10 @@ import { calendar, personCircle, map, informationCircle } from 'ionicons/icons';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import Mixd from '../Mixd/Mixd';
+import Dashboard from '../Dashboard/Dashboard';
+import Profile from '../Profile/Profile';
+
 
 const Home: React.FC = () => {
 
@@ -11,22 +15,23 @@ const Home: React.FC = () => {
     <IonReactRouter>
       <IonTabs >
       <IonRouterOutlet>
-        {/* <Route exact path="/mixd" component={mixd} /> */}
-        {/* <Route exact path="/dashboard" component={dashboard} /> */}
-        {/* <Route exact path="/profile" component={profile} /> */}
+        <Route exact path="/mixd" component={Mixd} /> 
+        <Route exact path="/home" component={Dashboard} /> 
+        {/* dashboard as in the main oage and home have same routes */}
+        <Route exact path="/profile" component={Profile} /> 
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color='#96A7AF'>
             <IonTabButton  className='tab-bar-icon-styling' tab="tab1" href="/mixd">
               <IonIcon  icon={personCircle} />
-              <IonLabel>MixD</IonLabel>
+              {/* <IonLabel>MixD</IonLabel> */}
             </IonTabButton>
-            <IonTabButton tab="tab4" href="/dashboard">
+            <IonTabButton tab="tab4" href="/home">
               <IonIcon icon={personCircle} />
-              <IonLabel>Dashboard</IonLabel>
+              {/* <IonLabel>Dashboard</IonLabel> */}
             </IonTabButton>
             <IonTabButton className='tab-bar-icon-styling' tab="tab3" href="/profile">
               <IonIcon icon={personCircle} />
-              <IonLabel>Profile</IonLabel>
+              {/* <IonLabel>Profile</IonLabel> */}
             </IonTabButton>
           </IonTabBar>
         </IonTabs>
