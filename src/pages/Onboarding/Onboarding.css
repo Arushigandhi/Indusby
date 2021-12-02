@@ -1,10 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,200;1,300;1,700&display=swap");
 
 img {
-  width: 250px;
+  width: 220px;
   display: block;
   margin: auto;
-  margin-top: 40%;
+  margin-top: 35%;
+}
+
+.logo{
+  width: 200px;
+  display: block;
+  margin: auto;
+  margin-top: 5%;
 }
 
 .title {
@@ -20,9 +27,19 @@ img {
   font-family: Montserrat;
   font-weight: 300;
   font-size: 14px;
-  padding: 10px 15px;
+  padding: 10px 15px 0 15px;
   text-align: center;
   color: #c1c1c1;
+}
+
+.question {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 14px;
+  /* padding: 10px 15px; */
+  text-align: center;
+  color: #c1c1c1;
+  margin-top: -40px;
 }
 
 .next_button {
@@ -44,13 +61,13 @@ a{
   font-family: Montserrat;
   font-weight: 500;
   color: white;
-  font-size: 44px;
+  font-size: 60px;
   text-align: center;
-  padding-top: 15%;
-
+  padding-top: 8%;
 }
 
 
 .button-styling {
+  margin-top: 10%;
   --border-radius: 10px;
 }
