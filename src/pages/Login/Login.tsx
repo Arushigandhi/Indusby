@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
 import {
   IonIcon,
@@ -8,12 +8,12 @@ import {
   IonLoading,
   IonPage,
   IonContent,
+  useIonViewWillEnter,
 } from "@ionic/react";
 import { arrowForwardOutline, person, personOutline } from "ionicons/icons";
 import { Link, useHistory } from "react-router-dom";
 import { loginUser } from "../../firebaseConfig";
 import { setUserState } from "../../redux/actions";
-import { useDispatch } from "react-redux";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -22,7 +22,6 @@ const Login: React.FC = () => {
   const [showToast, setShowToast] = useState<boolean>(false);
   const [busy, setBusy] = useState<boolean>(false);
 
-  const dispatch = useDispatch();
   const history = useHistory();
 
   async function login() {
@@ -30,7 +29,6 @@ const Login: React.FC = () => {
     try {
       const data: any = await loginUser(email, password);
       console.log(data);
-      dispatch(setUserState(data.user.email));
       history.push("/home");
       setMessage("Logged in successfully");
       setShowToast(true);

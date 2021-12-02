@@ -13,14 +13,15 @@ const Dashboard: React.FC = () => {
     setBusy(true);
     await logoutUser();
     setBusy(false);
-    history.replace("/");
+    window.location.reload();
+    history.replace("/login");
   }
 
   return (
     <div>
       <h1 className="category1">What are you looking for?</h1>
       <Card />
-      <IonButton onClick={logout}>Logout</IonButton>
+      <IonButton onClick={async () => await logout()}>Logout</IonButton>
     </div>
   );
 };
