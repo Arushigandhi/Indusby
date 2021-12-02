@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -52,4 +53,10 @@ export async function registerUser(email: string, password: string) {
   const auth = getAuth();
   const userCred = await createUserWithEmailAndPassword(auth, email, password);
   return userCred;
+}
+
+export async function logoutUser() {
+  const auth = getAuth();
+  const res = await signOut(auth);
+  return res;
 }

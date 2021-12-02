@@ -5,6 +5,8 @@ import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
 import Register from './pages/Register/Register'
 import Onboarding from './pages/Onboarding/Onboarding'
+import { useDispatch } from 'react-redux';
+import { setUserState } from './redux/actions';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,27 +39,33 @@ const RoutingSystem: React.FC = () => {
   return (
       <IonReactRouter>
             <IonRouterOutlet>
+              <Route exact path="/" component={Login} />
+              <Route exact path="/register" component={Register} />
               <Route exact path="/onboarding" component={Onboarding} />
               <Route exact path="/onboarding1" component={Onboarding1} />
               <Route exact path="/onboarding2" component={Onboarding2} />
               <Route exact path="/home" component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
             </IonRouterOutlet>
           </IonReactRouter>
   );
 };
 
+
 const App: React.FC = () => {
 
   const[busy,setBusy]=useState<boolean>(true)
+  
+
+  const dispatch = useDispatch()
 
   useEffect (() => {
-    getCurrentUser().then(user => {
+    getCurrentUser().then((user: any) => {
         if(user){
+          dispatch(setUserState(user.email))
           window.history.replaceState({}, '','/home')
         }
         else {
+        
          window.history.replaceState({}, '','/')
         }
         setBusy(false)
