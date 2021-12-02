@@ -1,9 +1,12 @@
 // Import the functions you need from the SDKs you need
+import { resolve } from "dns";
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -26,8 +29,34 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+export function getCurrentUser() {
+  return new Promise((resolve, reject) => {
+    const auth = getAuth();
+    const unsubscribe = onAuthStateChanged(auth, (user: any) => {
+      if (user) {
+        resolve(user);
+      } else {
+        resolve(null);
+      }
+      unsubscribe();
+    });
+  });
+}
+
 export async function loginUser(email: string, password: string) {
   const auth = getAuth();
   const userCred = await signInWithEmailAndPassword(auth, email, password);
   return userCred;
+}
+
+export async function registerUser(email: string, password: string) {
+  const auth = getAuth();
+  const userCred = await createUserWithEmailAndPassword(auth, email, password);
+  return userCred;
+}
+
+export async function logoutUser() {
+  const auth = getAuth();
+  const res = await signOut(auth);
+  return res;
 }

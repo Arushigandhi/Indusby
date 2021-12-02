@@ -1,25 +1,48 @@
 import React, { useState } from 'react'
 import './Login.css'
-import {IonIcon, IonInput, IonButton} from '@ionic/react'
+import {IonIcon, IonInput, IonButton, IonToast, IonLoading} from '@ionic/react'
 import { arrowForwardOutline, person, personOutline } from 'ionicons/icons'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom';
 import { loginUser } from '../../firebaseConfig'
+import { setUserState } from '../../redux/actions';
+import { useDispatch } from 'react-redux';
+
 
 const Login: React.FC = () => {
 
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
+    const [showToast, setShowToast] = useState<boolean>(false)
+    const [busy, setBusy] = useState<boolean>(false)
+
+      const dispatch = useDispatch()
+  const history = useHistory()
 
     async function login() {
+      setBusy(true)
       try{
-        const data = await loginUser(email, password);
+        
+        const data: any = await loginUser(email, password);
         console.log(data)
+        dispatch(setUserState(data.user.email))
+        history.push('/home')
+        setMessage("Logged in successfully");
+        setShowToast(true); 
       } catch(e:any) {
         console.log(e.message, e.code)
-      }
+        setMessage("Error Logging in");
+        setShowToast(true);
+      } 
+      setBusy(false);
     }
         return (
         <div className="login">
+          <IonLoading
+        message="please wait"
+        duration={0}
+        isOpen={busy}
+      />
             <div className="login-shape"></div>
             <div className="login-heading">
                 Login
@@ -52,6 +75,12 @@ const Login: React.FC = () => {
             <IonButton expand='block' color='primary' id='login-main-button' size='large' className='button-styling' onClick={login}>Login <IonIcon className="arrow-icon" icon= {arrowForwardOutline}></IonIcon></IonButton>
             <p className="ion-text-center">
           New here? <Link to="/register">Register</Link>
+          <IonToast
+          isOpen={showToast}
+          onDidDismiss={() => setShowToast(false)}
+          message={message}
+          duration={400}
+        />
             </p>
         </div>        
     );
