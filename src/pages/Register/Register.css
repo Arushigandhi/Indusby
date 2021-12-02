@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+
+.login-shape {
+  width: 40px;
+  height: 40px;
+  margin-top: 40%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background: linear-gradient(180deg, #40df9f 0%, #3ed598 100%);
+  box-shadow: 0px 2px 4px rgba(15, 218, 137, 0.3);
+  border-radius: 12px;
+}
+
+.login-heading {
+  color: white;
+  font-family: ABeeZee;
+  font-size: 42px;
+  padding: 0px 20px;
+}
+
+.login-desc {
+  color: #96a7af;
+  font-family: ABeeZee;
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+.icon-wrapper {
+  width: 30px;
+  height: 40px;
+  background-color: #435158;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.person-icon {
+  background-color: transparent;
+  color: #40df9f;
+}
+
+.input-styling {
+  --background: transparent;
+  margin: 0.5rem;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: ABeeZee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: white;
+  --placeholder-color: #96a7af;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.button-styling {
+  margin: 20%;
+  --border-radius: 10px;
+}
+
+.arrow-icon {
+  background-color: transparent;
+  font-size: 1.2rem;
+  margin-left: 5px;
+}

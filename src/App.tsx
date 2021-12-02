@@ -3,7 +3,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
-import Register from './pages/Register'
+import Register from './pages/Register/Register'
 import Onboarding from './pages/Onboarding/Onboarding'
 
 /* Core CSS required for Ionic components to work properly */
