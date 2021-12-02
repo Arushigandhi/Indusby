@@ -3,9 +3,9 @@ import React from "react";
 
 const Profile: React.FC = () => {
   return (
-    <IonContent className="profile-page">
-      <h1>Profile</h1>
-    </IonContent>
+    <IonPage className="profile_page">
+      <h1 className="profile_title">Your Profile</h1>
+    </IonPage>
   );
 };
 

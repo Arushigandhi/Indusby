@@ -32,6 +32,7 @@ import { getCurrentUser } from "./firebaseConfig";
 import Mixd from "./pages/Mixd/Mixd";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
+import SourceList from "./pages/Source/Source";
 
 const RoutingSystem: React.FC = () => {
   return (
