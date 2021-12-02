@@ -1,5 +1,5 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonSpinner } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home/Home'
 import Login from './pages/Login/Login'
@@ -26,20 +26,49 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Onboarding1 from './pages/Onboarding/Onboarding1';
 import Onboarding2 from './pages/Onboarding/Onboarding2';
+import { useEffect, useState } from 'react';
+import { getCurrentUser } from './firebaseConfig'
 
-const App: React.FC = () => (
+
+const RoutingSystem: React.FC = () => {
+  return (
+      <IonReactRouter>
+            <IonRouterOutlet>
+              <Route exact path="/onboarding" component={Onboarding} />
+              <Route exact path="/onboarding1" component={Onboarding1} />
+              <Route exact path="/onboarding2" component={Onboarding2} />
+              <Route exact path="/home" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+            </IonRouterOutlet>
+          </IonReactRouter>
+  );
+};
+
+const App: React.FC = () => {
+
+  const[busy,setBusy]=useState<boolean>(true)
+
+  useEffect (() => {
+    getCurrentUser().then(user => {
+        if(user){
+          window.history.replaceState({}, '','/home')
+        }
+        else {
+         window.history.replaceState({}, '','/')
+        }
+        setBusy(false)
+    }
+      
+    
+    )
+  }, [])
+
+  return (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/onboarding" component={Onboarding} />
-        <Route exact path="/onboarding1" component={Onboarding1} />
-        <Route exact path="/onboarding2" component={Onboarding2} />
-        <Route exact path="/home" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Register} />
-      </IonRouterOutlet>
-    </IonReactRouter>
+    {busy? <IonSpinner />:<RoutingSystem />}
   </IonApp>
 );
+  };
 
 export default App;
