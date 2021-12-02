@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 
-.login-shape {
-  width: 40px;
-  height: 40px;
-  margin-top: 40%;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  background: linear-gradient(180deg, #40df9f 0%, #3ed598 100%);
-  box-shadow: 0px 2px 4px rgba(15, 218, 137, 0.3);
-  border-radius: 12px;
-}
-
 .login-heading {
   color: white;
   font-family: ABeeZee;

@@ -3,7 +3,7 @@
 .login-shape {
   width: 40px;
   height: 40px;
-  margin-top: 40%;
+  margin-top: 20%;
   margin-bottom: 20px;
   margin-left: 20px;
   background: linear-gradient(180deg, #40df9f 0%, #3ed598 100%);
@@ -76,4 +76,8 @@
 p {
   color: white;
   text-decoration: none;
+}
+
+.login-page {
+  --ion-background-color: #213239 !important;
 }
