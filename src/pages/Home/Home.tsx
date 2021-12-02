@@ -16,7 +16,8 @@ const Home: React.FC = () => {
       <IonTabs >
       <IonRouterOutlet>
         <Route exact path="/mixd" component={Mixd} /> 
-        <Route exact path="/dashboard" component={Dashboard} /> 
+        <Route exact path="/home" component={Dashboard} /> 
+        {/* dashboard as in the main oage and home have same routes */}
         <Route exact path="/profile" component={Profile} /> 
         </IonRouterOutlet>
         <IonTabBar slot="bottom" color='#96A7AF'>
@@ -24,7 +25,7 @@ const Home: React.FC = () => {
               <IonIcon  icon={personCircle} />
               {/* <IonLabel>MixD</IonLabel> */}
             </IonTabButton>
-            <IonTabButton tab="tab4" href="/dashboard">
+            <IonTabButton tab="tab4" href="/home">
               <IonIcon icon={personCircle} />
               {/* <IonLabel>Dashboard</IonLabel> */}
             </IonTabButton>

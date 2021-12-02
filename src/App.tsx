@@ -26,6 +26,9 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import Onboarding1 from './pages/Onboarding/Onboarding1';
 import Onboarding2 from './pages/Onboarding/Onboarding2';
+import Mixd from './pages/Mixd/Mixd';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Profile from './pages/Profile/Profile';
 
 const App: React.FC = () => (
   <IonApp>
@@ -37,6 +40,9 @@ const App: React.FC = () => (
         <Route exact path="/home" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        {/* <Route exact path="/mixd" component={Mixd} /> 
+        <Route exact path="/dashboard" component={Dashboard} /> 
+        <Route exact path="/profile" component={Profile} />  */}
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
