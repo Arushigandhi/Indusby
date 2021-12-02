@@ -6,19 +6,13 @@ import {
   IonButton,
   IonToast,
   IonLoading,
+  IonPage,
 } from "@ionic/react";
 import { arrowForwardOutline, person } from "ionicons/icons";
 import { Link, useHistory } from "react-router-dom";
 import { registerUser } from "../../firebaseConfig";
 
 const Register: React.FC = () => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [cpassword, setCPassword] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [showToast, setShowToast] = useState<boolean>(false);
-  const [busy, setBusy] = useState<boolean>(false);
-
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [cpassword, setCPassword] = useState<string>("");
@@ -44,14 +38,6 @@ const Register: React.FC = () => {
 
     if (password.length < 7) {
       setMessage("Passwords too short");
-      setBusy(false);
-      return setShowToast(true);
-    }
-
-    const data = await registerUser(email, password);
-    if (data) {
-      setMessage("User registered");
-      history.push("/tab/home");
       setBusy(false);
       return setShowToast(true);
     }
