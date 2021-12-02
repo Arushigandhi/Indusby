@@ -1,36 +1,45 @@
 .mixd_title {
-    font-family: Montserrat;
-    font-weight: 500;
-    color: white;
-    font-size: 18px;
-    /* text-align: center; */
-    position: relative;
-    margin-top: 170px;
-    margin-left: 20px;
-  }
+  font-family: Montserrat;
+  font-weight: 500;
+  color: white;
+  font-size: 18px;
+  /* text-align: center; */
+  position: relative;
+  margin-top: 170px;
+  margin-left: 20px;
+}
 
-  .mixd_overview{
-    width: 320px;
-    margin: auto;
-    z-index: -1;
-    padding-top: 5%;
-    /* position: absolute; */
-  }
+.mixd_overview {
+  width: 320px;
+  margin: auto;
+  z-index: -1;
+  padding-top: 5%;
+  /* position: absolute; */
+}
 
-  .mixd_overview_text {
-    position: relative;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 18px;
-    /* font-style: italic; */
-    text-align: center;
-    color: white;
-    margin-top: -180px;
-    z-index: 1;
-    background-color: transparent;
-  }
+.mixd_overview_text {
+  position: relative;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 18px;
+  /* font-style: italic; */
+  text-align: center;
+  color: white;
+  margin-top: -180px;
+  z-index: 1;
+  background-color: transparent;
+}
 
-  .prof_scroll{
-    overflow-y: scroll;
-    white-space: nowrap;
-  }
+.prof_scroll {
+  overflow-y: scroll;
+  white-space: nowrap;
+}
+
+.profile-page {
+  --ion-background-color: #213239 !important;
+}
+
+.profile-page h1 {
+  padding: 1rem;
+  font-size: 3rem;
+}
