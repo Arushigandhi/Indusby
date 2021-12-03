@@ -1,9 +1,16 @@
 .profile_title {
-    font-family: Montserrat;
-    font-weight: 500;
-    color: white;
-    font-size: 18px;
-    position: relative;
-    margin-top: 170px;
-    margin-left: 20px;
+  font-family: Montserrat;
+  font-weight: 500;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 15%;
+  margin: 0 auto;
+  }
+
+
+  .profile_dot {
+    height: 120px;
+    width: 120px;
+    margin: 5% auto;
   }

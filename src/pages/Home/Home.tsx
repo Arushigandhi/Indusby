@@ -15,7 +15,7 @@ import Mixd from "../Mixd/Mixd";
 import Dashboard from "../Dashboard/Dashboard";
 import Profile from "../Profile/Profile";
 import "./Home.css";
-import Source from "../Source/Source";
+import Source from "../SourceList/Source";
 
 
 const Home: React.FC = () => {
@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           <Route exact path="/mixd" component={Mixd} />
           <Route exact path="/home" component={Dashboard} />
           <Route exact path="/profile" component={Profile} />
-          <Route exact path="/source" component={Source} />
+          <Route exact path="/home/source" component={Source} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom" >
           <IonTabButton tab="mixd" href="/mixd">

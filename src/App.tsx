@@ -32,13 +32,12 @@ import { getCurrentUser } from "./firebaseConfig";
 import Mixd from "./pages/Mixd/Mixd";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
-import SourceList from "./pages/Source/Source";
 
 const RoutingSystem: React.FC = () => {
   return (
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/onboarding" component={Onboarding} />
+        <Route exact path="/" component={Onboarding} />
         <Route exact path="/onboarding1" component={Onboarding1} />
         <Route exact path="/onboarding2" component={Onboarding2} />
         <Route exact path="/home" component={Home} />

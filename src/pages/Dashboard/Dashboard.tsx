@@ -51,7 +51,7 @@ const Dashboard: React.FC = () => {
     <div>
 
       <h1 className="category1">What are you looking for?</h1>
-      <IonButton href="/source">
+      <IonButton href="/home/source">
          Take to Source
       </IonButton>
     </div>
