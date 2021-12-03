@@ -8,7 +8,7 @@ import {
   IonBadge,
 } from "@ionic/react";
 import { personOutline, homeOutline, helpOutline } from "ionicons/icons";
-import { Redirect, Route } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { IonApp, IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import Mixd from "../Mixd/Mixd";
@@ -23,10 +23,12 @@ const Home: React.FC = () => {
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Switch>
           <Route exact path="/mixd" component={Mixd} />
           <Route exact path="/home" component={Dashboard} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/source" component={Source} />
+          </Switch>
         </IonRouterOutlet>
         <IonTabBar slot="bottom" >
           <IonTabButton tab="mixd" href="/mixd">

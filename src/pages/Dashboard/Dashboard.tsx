@@ -14,6 +14,7 @@ import Card from "../../components/CategoryOneCard/Card";
 import "./Dashboard.css";
 import { useHistory } from "react-router-dom";
 import { logoutUser } from "../../firebaseConfig";
+import { Link} from "react-router-dom";
 
 const Dashboard: React.FC = () => {
   // const [busy, setBusy] = useState<boolean>(false);
@@ -49,7 +50,6 @@ const Dashboard: React.FC = () => {
   return (
     // <IonContent className="dashboard-page ion-padding">
     <div>
-
       <h1 className="category1">What are you looking for?</h1>
       <IonButton href="/source">
          Take to Source

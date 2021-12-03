@@ -14,7 +14,7 @@ import { useHistory } from "react-router";
 import { logoutUser } from "../../firebaseConfig";
 import "./Source.css"
 
-const SourceList: React.FC = () => {
+const Source: React.FC = () => {
     const [busy, setBusy] = useState<boolean>(false);
     const history = useHistory();
   
@@ -46,7 +46,7 @@ const SourceList: React.FC = () => {
       setInfo([...info, { name, email, phone, quantity }]);
     };
     return (
-      <IonContent className="dashboard-page ion-padding">
+      <div>
         <h1 className="category1">What are you looking for?</h1>
         <IonButton expand="block" onClick={() => showModalNow(1)}>
           Industrial By-Products
@@ -136,8 +136,8 @@ const SourceList: React.FC = () => {
             Close Modal
           </IonButton>
         </IonModal>
-      </IonContent>
+      </div>
     );
   };
 
-export default SourceList;
+export default Source;

@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Onboarding from "./pages/Onboarding/Onboarding";
 import { Link, useHistory } from "react-router-dom";
+import Source from "./pages/Source/Source"
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -44,6 +45,7 @@ const RoutingSystem: React.FC = () => {
         <Route exact path="/home" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/source" component={Source} />
       </IonRouterOutlet>
     </IonReactRouter>
   );
@@ -56,7 +58,7 @@ const App: React.FC = () => {
     getCurrentUser().then((user) => {
       console.log(user);
       if (user) {
-        window.history.replaceState({}, "", "/home");
+        
       } else {
         window.history.replaceState({}, "", "/login");
       }
