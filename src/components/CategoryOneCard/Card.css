@@ -1,15 +1,31 @@
-.outer_layout{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,200;1,300;1,700&display=swap");
+.card_layout{
+    border-radius: 25px;
     height: 100px;
-    position: relative;
-    display: flex;
     width: 320px;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 5% auto;
+    margin: auto;
+    opacity: 100%;
+    padding-top: 18px;
+    margin: 20px;
 }
 
-h1{
-    background-color: none;
+.card_title{
+    background-color: transparent;
+    position: relative;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: #213239;
+    margin-top: 10px;
+}
+
+.card_eg{
+    background-color: transparent;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    color: #213239;
+    margin-top: -5px;
 }

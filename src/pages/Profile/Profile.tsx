@@ -7,7 +7,6 @@ const Profile: React.FC = () => {
   return (
     <div className="profile_page">
       <h1 className="profile_title">Your Profile</h1>
-      {/* <span className="profile_dot"></span> */}
       <img className="profile_dot" src={circle}/>
     </div>
   );

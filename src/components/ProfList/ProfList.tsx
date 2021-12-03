@@ -1,4 +1,3 @@
-import { AnyNsRecord } from "dns";
 import React from "react";
 import "./ProfList.css";
 import { Link } from "react-router-dom";
