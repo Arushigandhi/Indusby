@@ -11,7 +11,7 @@ const Onboarding1: React.FC = () => {
         <div>
             <img src={onboarding2} alt=""/>
             <h1 className="title">How does Indusby work?</h1>
-            <h2 className="caption">By creating aportal where companies can enlist their unused by-products which can be sorted and accessed as clinet wishes, all augemented by research connect!</h2>
+            <h2 className="caption">We bring resourceful materials, its potential consumers and wisdom under a single user-friendly portal with a goal of high relevance and delivery.</h2>
             <a href="/onboarding2">
                 <IonFab vertical="bottom" horizontal="end" slot="fixed" className="next_button" color="primary">
                 <IonFabButton>
