@@ -15,13 +15,13 @@ const Mixd: React.FC = () => {
       </div>
       <h1 className="mixd_title">Consult a Professor:</h1>
       <IonContent className="prof_scroll">
-        <ProfList profName="Dr. Gopinath Nayak" dotColour="#FFC542"></ProfList>
-        <ProfList profName="Aryamann Ningombam" dotColour="#3ED598"></ProfList>
-        <ProfList profName="Jyothsna Ashok" dotColour="#FF565E"></ProfList>
-        <ProfList profName="Dhruva Goyal" dotColour="#FFC542"></ProfList>
-        <ProfList profName="Vedika Sharma" dotColour="#3ED598"></ProfList>
-        <ProfList profName="Ananya Tewari" dotColour="#FF565E"></ProfList>
-        <ProfList profName="Diya Dhabade" dotColour="#FFC542"></ProfList>
+        <ProfList profName="Dr. Gopinath Nayak, MIT" profPos="Concrete Tech." dotColour="#FFC542"></ProfList>
+        <ProfList profName="Dr. BB Das, NIT-K" profPos="Concrete & C&D" dotColour="#3ED598"></ProfList>
+        <ProfList profName="Girish Ng, MIT" profPos="Transportation" dotColour="#FF565E"></ProfList>
+        <ProfList profName="Dr Manu Santanam,IIT-M" profPos="Bagasse Ash" dotColour="#FFC542"></ProfList>
+        <ProfList profName="Dr Gangadhar, NIT-K" profPos="Construction Mgmt" dotColour="#3ED598"></ProfList>
+        <ProfList profName="Sugandhini HK" profPos="Concrete Tech." dotColour="#FF565E"></ProfList>
+        <ProfList profName="Laxman Kudwa" profPos="Green Buildings" dotColour="#FFC542"></ProfList>
     </IonContent>
     </IonPage>
   );
