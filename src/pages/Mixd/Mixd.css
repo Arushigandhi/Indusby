@@ -32,6 +32,19 @@
   background-color: transparent;
 }
 
+.mixd_overview_description{
+  position: relative;
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 23px;
+  text-align: justify;
+  color: white;
+  z-index: 1;
+  background-color: transparent;
+  padding-left: 26px;
+  
+}
+
 .prof_scroll {
   overflow-y: scroll;
   white-space: nowrap;
