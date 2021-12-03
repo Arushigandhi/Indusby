@@ -1,31 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,200;1,300;1,700&display=swap");
-.card_layout{
-    border-radius: 25px;
-    height: 100px;
-    width: 320px;
-    margin: auto;
-    opacity: 100%;
-    padding-top: 18px;
-    margin: 20px;
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+.card_layout {
+  border-radius: 25px;
+  height: 100px;
+  width: 320px;
+  margin: auto;
+  padding-top: 18px;
+  margin: 20px;
 }
 
-.card_title{
-    background-color: transparent;
-    position: relative;
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 18px;
-    text-align: center;
-    color: #213239;
-    margin-top: 10px;
+.card_title {
+  background-color: transparent;
+  position: relative;
+  font-family: ABeeZee;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #ffc542;
+  margin-top: 10px;
 }
 
-.card_eg{
-    background-color: transparent;
-    font-family: Montserrat;
-    font-weight: 500;
-    font-size: 15px;
-    text-align: center;
-    color: #213239;
-    margin-top: -5px;
+.card_eg {
+  background-color: transparent;
+  font-family: ABeeZee;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  color: #ffc542;
+  margin-top: -5px;
 }

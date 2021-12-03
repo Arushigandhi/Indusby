@@ -20,6 +20,7 @@ const Mixd: React.FC = () => {
         <ProfList profName="Dhruva Goyal" dotColour="#FFC542"></ProfList>
         <ProfList profName="Vedika Sharma" dotColour="#3ED598"></ProfList>
         <ProfList profName="Ananya Tewari" dotColour="#FF565E"></ProfList>
+        <ProfList profName="Diya Dhabade" dotColour="#FFC542"></ProfList>
     </IonContent>
     </IonPage>
   );

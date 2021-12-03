@@ -67,3 +67,132 @@
   background-color: transparent;
   color: #213239;
 }
+
+.list-item {
+  padding: 10px;
+  margin: 15px auto;
+  display: flex;
+  height: 110px;
+  border-radius: 12px;
+  background: #286053;
+  border-radius: 25px;
+  width: 90%;
+}
+
+.qty-wrapper {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  font-family: ABeeZee;
+  margin: auto 10px;
+}
+
+.qty-wrapper p {
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-family: ABeeZee;
+  margin: 0;
+}
+
+.list-desc-wrapper {
+  margin-left: 10px;
+  background-color: transparent !important;
+  display: flex;
+  font-family: AbeeZee;
+  color: #3dd598;
+  flex-direction: column;
+}
+
+.list-desc-wrapper div {
+  background-color: transparent;
+  align-items: center;
+}
+
+.name {
+  font-style: italic;
+}
+
+.call-icon {
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.phone-wrapper {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.industry {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 1.1rem;
+}
+
+.icon-wrapper {
+  width: 30px;
+  height: 40px;
+  background-color: #435158;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.person-icon {
+  background-color: transparent;
+  color: #40df9f;
+}
+
+.input-styling {
+  --background: transparent;
+  margin: 0.5rem;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+  text-align: left;
+  font-family: ABeeZee;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --color: white;
+  --placeholder-color: #96a7af;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.login-shape {
+  width: 40px;
+  height: 40px;
+  margin-top: 20%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background: linear-gradient(180deg, #40df9f 0%, #3ed598 100%);
+  box-shadow: 0px 2px 4px rgba(15, 218, 137, 0.3);
+  border-radius: 12px;
+}
+
+.login-heading {
+  color: white;
+  font-family: ABeeZee;
+  font-size: 42px;
+  padding: 0px 20px;
+}
+
+.login-desc {
+  color: #96a7af;
+  font-family: ABeeZee;
+  font-size: 24px;
+  padding: 10px 20px;
+}

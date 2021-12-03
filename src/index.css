@@ -1,7 +1,11 @@
-*{
-    background-color: #213239; 
+* {
+  background-color: #213239;
+}
+
+body {
+  background-color: #213239;
 }
 
 html {
-    scroll-behaviour: smooth;
+  scroll-behaviour: smooth;
 }
