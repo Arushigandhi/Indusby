@@ -26,7 +26,6 @@ const Home: React.FC = () => {
           <Route exact path="/mixd" component={Mixd} />
           <Route exact path="/home" component={Dashboard} />
           <Route exact path="/profile" component={Profile} />
-          <Route exact path="/home/source" component={Source} />
         </IonRouterOutlet>
         <IonTabBar slot="bottom" >
           <IonTabButton tab="mixd" href="/mixd">
