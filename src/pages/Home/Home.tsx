@@ -15,7 +15,7 @@ import Mixd from "../Mixd/Mixd";
 import Dashboard from "../Dashboard/Dashboard";
 import Profile from "../Profile/Profile";
 import "./Home.css";
-import Source from "../Source/Source";
+import Source from "../SourceList/Source";
 
 
 const Home: React.FC = () => {

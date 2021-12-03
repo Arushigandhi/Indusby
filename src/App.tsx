@@ -6,7 +6,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Onboarding from "./pages/Onboarding/Onboarding";
 import { Link, useHistory } from "react-router-dom";
-import Source from "./pages/Source/Source"
+import Source from "./pages/SourceList/Source"
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -33,13 +33,12 @@ import { getCurrentUser } from "./firebaseConfig";
 import Mixd from "./pages/Mixd/Mixd";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Profile from "./pages/Profile/Profile";
-import SourceList from "./pages/Source/Source";
 
 const RoutingSystem: React.FC = () => {
   return (
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/onboarding" component={Onboarding} />
+        <Route exact path="/" component={Onboarding} />
         <Route exact path="/onboarding1" component={Onboarding1} />
         <Route exact path="/onboarding2" component={Onboarding2} />
         <Route exact path="/home" component={Home} />
