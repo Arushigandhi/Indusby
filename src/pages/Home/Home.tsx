@@ -6,6 +6,7 @@ import {
   IonIcon,
   IonLabel,
   IonBadge,
+  IonNav,
 } from "@ionic/react";
 import { personOutline, homeOutline, helpOutline } from "ionicons/icons";
 import { Redirect, Route, Switch } from "react-router-dom";
@@ -16,6 +17,7 @@ import Dashboard from "../Dashboard/Dashboard";
 import Profile from "../Profile/Profile";
 import "./Home.css";
 import Source from "../SourceList/Source";
+
 
 
 const Home: React.FC = () => {
@@ -36,6 +38,7 @@ const Home: React.FC = () => {
             {/* <IonLabel>MixD</IonLabel> */}
           </IonTabButton>
           <IonTabButton tab="home" href="/home">
+            <IonNav />
             <IonIcon icon={homeOutline} />
             {/* <IonLabel>Dashboard</IonLabel> */}
           </IonTabButton>
@@ -44,6 +47,7 @@ const Home: React.FC = () => {
             tab="profile"
             href="/profile"
           >
+            <IonNav />
             <IonIcon icon={personOutline} />
             {/* <IonLabel>Profile</IonLabel> */}
           </IonTabButton>

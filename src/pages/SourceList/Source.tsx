@@ -1,4 +1,4 @@
-import { IonContent, IonPage } from "@ionic/react";
+import { IonContent, IonIcon, IonPage, IonFabButton, IonFab } from "@ionic/react";
 import React, { useState } from "react";
 import {
     IonButton,
@@ -13,6 +13,8 @@ import {
 import { useHistory } from "react-router";
 import { logoutUser } from "../../firebaseConfig";
 import "./Source.css"
+import { addOutline, arrowBack, funnelOutline } from "ionicons/icons";
+import BG from "./BG.png";
 
 const Source: React.FC = () => {
     const [busy, setBusy] = useState<boolean>(false);
@@ -47,7 +49,22 @@ const Source: React.FC = () => {
     };
     return (
       <div>
-        <h1 className="category1">What are you looking for?</h1>
+        <div className="heading-wrapper">
+          <IonButton className="back-button" href="/home">
+      <IonIcon slot="icon-only" icon={arrowBack} className="back-icon" />
+    </IonButton>
+    <IonFab vertical="bottom" horizontal="end" slot="fixed" className="add_button" color="primary">
+       <IonFabButton>
+                    <IonIcon className="next-icon" icon= {addOutline} />
+        </IonFabButton>
+        </IonFab>
+        <p className="ion-text-center heading">Industrial By-products</p>
+        </div>
+        <img src={BG} className="mixd_overview" alt="" />
+        <div className="desc-wrapper"><p className="desc">Choose your by-product source</p>
+        <IonButton className="filter" href="/home">
+      <IonIcon slot="icon-only" icon={funnelOutline} className="filter-icon" />
+    </IonButton></div>
         <IonButton expand="block" onClick={() => showModalNow(1)}>
           Industrial By-Products
         </IonButton>
