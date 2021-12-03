@@ -11,10 +11,11 @@ const Mixd: React.FC = () => {
       <div>
         <img src={BG} className="mixd_overview" alt="" />
         <h2 className="mixd_overview_text">What is MixD?</h2>
+        {/* <h2 className="mixd_overview_text">Robust design customised for client needs</h2> */}
       </div>
       <h1 className="mixd_title">Consult a Professor:</h1>
       <IonContent className="prof_scroll">
-        <ProfList profName="Arushi Gandhi" dotColour="#FFC542"></ProfList>
+        <ProfList profName="Dr. Gopinath Nayak" dotColour="#FFC542"></ProfList>
         <ProfList profName="Aryamann Ningombam" dotColour="#3ED598"></ProfList>
         <ProfList profName="Jyothsna Ashok" dotColour="#FF565E"></ProfList>
         <ProfList profName="Dhruva Goyal" dotColour="#FFC542"></ProfList>

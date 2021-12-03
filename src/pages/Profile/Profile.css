@@ -8,6 +8,38 @@
   margin: 0 auto;
   }
 
+  .profile_name {
+    font-family: Montserrat;
+    font-weight: 500;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 5%;
+    margin: 0 auto;
+    }
+
+
+    .profile_question{
+      font-family: Montserrat;
+      font-weight: 300;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      padding-top: 5%;
+      margin: 0 auto;
+      
+
+    }
+
+    .checkbox{
+      background-color: transparent;
+    }
+
+    .checkbox_div{
+      margin-top: 30px;
+      margin-left: 70px;
+    }
+
 
   .profile_dot {
     height: 120px;
