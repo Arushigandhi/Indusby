@@ -5,9 +5,9 @@
   font-size: 18px;
   /* text-align: center; */
   position: relative;
-  margin-top: 170px;
+  margin-top: 7rem;
   margin-left: 20px;
-  background-color: #213239 !important
+  background-color: #213239 !important;
 }
 
 .mixd_overview {
@@ -16,7 +16,7 @@
   z-index: -1;
   padding-top: 5%;
   /* position: absolute; */
-  background-color: #213239 !important
+  background-color: #213239 !important;
 }
 
 .mixd_overview_text {
@@ -28,11 +28,13 @@
   text-align: center;
   color: white;
   margin-top: -180px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 1;
   background-color: transparent;
 }
 
-.mixd_overview_description{
+.mixd_overview_description {
   position: relative;
   font-family: Montserrat;
   font-weight: 300;
@@ -42,7 +44,6 @@
   z-index: 1;
   background-color: transparent;
   padding-left: 26px;
-  
 }
 
 .prof_scroll {
